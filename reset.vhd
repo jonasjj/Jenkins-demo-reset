@@ -19,7 +19,7 @@ begin
   SHIFT_REG_PROC : process(clk)
   begin
     if rising_edge(clk) then
-      shift_reg <= shift_reg(6 downto 0) & not rst_in;
+      shift_reg <= '1'; --shift_reg(6 downto 0) & not rst_in;
     end if;
   end process;
 
