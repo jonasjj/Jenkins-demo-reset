@@ -5,6 +5,8 @@ use ieee.numeric_std.all;
 library pck_lib;
 use pck_lib.sim.all;
 
+library reset_lib;
+
 entity reset_tb is
 end reset_tb; 
 
@@ -18,7 +20,7 @@ begin
 
   clk <= not clk after sim_clk_period / 2;
 
-  DUT : entity seg7.reset(rtl)
+  DUT : entity reset_lib.reset(rtl)
   port map (
     clk => clk,
     rst_in => rst_in,
